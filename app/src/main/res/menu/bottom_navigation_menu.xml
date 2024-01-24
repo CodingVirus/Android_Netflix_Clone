@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/page_home"
+        android:enabled="true"
+        android:icon="@drawable/bottom_home_icon"
+        android:title="홈"/>
+
+    <item
+        android:id="@+id/page_new"
+        android:enabled="true"
+        android:icon="@drawable/bottom_new_and_hot_icon"
+        android:title="New &amp; Hot"/>
+
+    <item
+        android:id="@+id/page_my"
+        android:enabled="true"
+        android:icon="@drawable/bottom_my_netflix_icon"
+        android:title="나의 넷플릭스"/>
+</menu>
