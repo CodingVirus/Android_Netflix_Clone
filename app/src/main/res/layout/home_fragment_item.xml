@@ -12,7 +12,8 @@
         app:layout_constraintStart_toStartOf="parent"
         android:text="Test"
         android:textSize="22sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"

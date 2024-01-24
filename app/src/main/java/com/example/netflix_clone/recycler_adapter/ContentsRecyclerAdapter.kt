@@ -2,21 +2,21 @@ package com.example.netflix_clone.recycler_adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.appcompat.view.menu.MenuView.ItemView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.netflix_clone.data.ContentsData
+import com.example.netflix_clone.data.ContentsDataList
 import com.example.netflix_clone.databinding.HomeFragmentItemBinding
 
-class ContentsRecyclerAdapter(private var list : MutableList<String>) :
+class ContentsRecyclerAdapter(private var list : MutableList<ContentsData>) :
     RecyclerView.Adapter<ContentsRecyclerAdapter.Holder>() {
 
     inner class Holder(private val binding: HomeFragmentItemBinding) : RecyclerView.ViewHolder(binding.root) {
         var themeText = binding.txTheme
 
 
-        fun bind(str: String) {
-            themeText.text = str
-            binding.recyclerView.adapter = ContentsRecyclerAdapter2(ContentsData.list)
+        fun bind(item: ContentsData) {
+            themeText.text = item.str
+            binding.recyclerView.adapter = ContentsRecyclerAdapter2(ContentsDataList.list)
         }
     }
 

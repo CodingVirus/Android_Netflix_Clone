@@ -5,8 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.netflix_clone.R
-import com.example.netflix_clone.data.ContentsData
+import com.example.netflix_clone.data.ContentsDataList
 import com.example.netflix_clone.databinding.FragmentHomeBinding
 import com.example.netflix_clone.recycler_adapter.ContentsRecyclerAdapter
 
@@ -40,7 +39,7 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-        binding.recyclerView.adapter = ContentsRecyclerAdapter(ContentsData.list)
+        binding.recyclerView.adapter = ContentsRecyclerAdapter(ContentsDataList.list)
     }
 
     companion object {

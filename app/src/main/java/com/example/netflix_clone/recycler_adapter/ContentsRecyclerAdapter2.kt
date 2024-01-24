@@ -4,17 +4,20 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.appcompat.view.menu.MenuView.ItemView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.netflix_clone.data.ContentsData
 import com.example.netflix_clone.databinding.ContentsItemBinding
 import com.example.netflix_clone.databinding.HomeFragmentItemBinding
 
-class ContentsRecyclerAdapter2(private var list : MutableList<String>) :
+class ContentsRecyclerAdapter2(private var list : MutableList<ContentsData>) :
     RecyclerView.Adapter<ContentsRecyclerAdapter2.Holder>() {
 
-    inner class Holder(binding: ContentsItemBinding) : RecyclerView.ViewHolder(binding.root) {
+    inner class Holder(private val binding: ContentsItemBinding) : RecyclerView.ViewHolder(binding.root) {
+
+        var test = binding.ivContentsPost
 
 
-        fun bind(str: String) {
-
+        fun bind(item: ContentsData) {
+            test.setImageResource(item.post)
         }
     }
 
