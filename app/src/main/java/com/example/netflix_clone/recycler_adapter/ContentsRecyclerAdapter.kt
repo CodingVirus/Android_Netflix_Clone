@@ -20,6 +20,10 @@ class ContentsRecyclerAdapter(private var list : MutableList<ContentsData>) :
         }
     }
 
+    override fun getItemViewType(position: Int): Int {
+        return super.getItemViewType(position)
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
         val binding = HomeFragmentItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return Holder(binding)
